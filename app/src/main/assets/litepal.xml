@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<litepal>
+    <dbname value="Questionnaire"/>
+
+    <version value="1"></version>
+
+    <list>
+        <mapping class="com.fang.chinaindex.questionnaire.entity.UserInfo"></mapping>
+        <mapping class="com.fang.chinaindex.questionnaire.entity.SurveyInfo"></mapping>
+        <mapping class="com.fang.chinaindex.questionnaire.entity.Question"></mapping>
+        <mapping class="com.fang.chinaindex.questionnaire.entity.Option"></mapping>
+        <mapping class="com.fang.chinaindex.questionnaire.entity.Logic"></mapping>
+        <mapping class="com.fang.chinaindex.questionnaire.entity.AnsweredSurvey"></mapping>
+        <mapping class="com.fang.chinaindex.questionnaire.entity.AnsweredQuestion"></mapping>
+        <mapping class="com.fang.chinaindex.questionnaire.entity.Answer"></mapping>
+    </list>
+
+</litepal>
