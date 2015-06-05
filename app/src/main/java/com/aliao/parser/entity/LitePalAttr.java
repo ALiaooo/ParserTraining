@@ -70,6 +70,6 @@ public class LitePalAttr {
 
     @Override
     public String toString() {
-        return "数据库名称:"+dbName+" ,数据库版本"+version;
+        return "数据库名称:"+dbName+"\n数据库版本:"+version+"\n\n数据库映射对象类名:";
     }
 }

@@ -3,4 +3,19 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <Button
+        android:id="@+id/btn_parse_litepal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="解析LitePal.xml文件"
+        android:layout_marginTop="10dp"/>
+
+    <Button
+        android:id="@+id/btn_parse_beauty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="解析beauty.xml文件"
+        android:layout_marginTop="10dp"/>
+
+
 </LinearLayout>

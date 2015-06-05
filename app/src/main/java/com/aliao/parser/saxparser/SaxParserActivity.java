@@ -13,7 +13,7 @@ import com.aliao.parser.R;
 /**
  * Created by 丽双 on 2015/6/3.
  */
-public class SaxParserActivity extends FragmentActivity implements View.OnClickListener{
+public class SaxParserActivity extends FragmentActivity {
 
 
     private String lastFragmentTag;
@@ -22,31 +22,14 @@ public class SaxParserActivity extends FragmentActivity implements View.OnClickL
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sax);
-        initViews();
-    }
-
-    private void initViews() {
-        findViewById(R.id.btn_parse_beauty).setOnClickListener(this);
-        findViewById(R.id.btn_parse_litepal).setOnClickListener(this);
+        replaceFragment("parser",  SaxParserFragment.TAG);
     }
 
 
-    @Override
-    public void onClick(View v) {
-        switch (v.getId()){
-            case R.id.btn_parse_beauty:
-                replaceBeauty();
-                break;
-            case R.id.btn_parse_litepal:
-                replaceLitePal();
-                break;
-        }
-    }
-
-    private void replaceLitePal() {
+    public void replaceLitePal() {
         replaceFragment("解析litepal", LitePalParserFragment.TAG);
     }
-    private void replaceBeauty() {
+    public void replaceBeauty() {
         replaceFragment("解析beauty", BeautyParserFragment.TAG);
     }
 
@@ -71,7 +54,10 @@ public class SaxParserActivity extends FragmentActivity implements View.OnClickL
     }
 
     private Fragment getFragment(String tag) {
-        if (tag.equals(LitePalParserFragment.TAG)) {
+
+        if (tag.equals(SaxParserFragment.TAG)) {
+            return SaxParserFragment.newInstance();
+        }if (tag.equals(LitePalParserFragment.TAG)) {
             return new LitePalParserFragment();
         } else if (tag.equals(BeautyParserFragment.TAG)) {
             return new BeautyParserFragment();

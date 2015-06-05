@@ -46,11 +46,12 @@ public class LitePalParserFragment extends Fragment implements View.OnClickListe
     }
 
     private void showResult() {
+        mTvResult.setVisibility(View.VISIBLE);
         LitePalAttr mLitePalAttr = LitePalAttr.getIntance();
         StringBuffer sb = new StringBuffer(mLitePalAttr.toString());
         for (String className:mLitePalAttr.getClassNames()){
-            sb.append("/n"+className);
+            sb.append("\n\n"+className);
         }
-        mTvResult.setText(sb.toString());
+        mTvResult.setText("SAXParser解析litepal.xml结果：\n\n"+sb.toString());
     }
 }
